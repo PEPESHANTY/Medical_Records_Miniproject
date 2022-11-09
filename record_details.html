@@ -851,10 +851,10 @@
 		"type": "function"
 	}
 ]
-        var contractaddress = '0x99694eA5109070F73Fc6550Cc55C573f48d08C46';
+        var contractaddress = '0x8a71646e370d7834d2586dd7239956bd42e83a18';
 		
 		function date_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account});
             var idd = document.getElementById("tid1").value;
              var result = myContract.methods.get_previous_dates(idd).call(function (err, result) {
                
@@ -867,7 +867,7 @@
         }
 		
 		function get_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '5000000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account});
             var idt = document.getElementById("tid").value;
 			
 			

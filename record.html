@@ -759,32 +759,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "totalSupply",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "totalSupplycount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -851,9 +825,9 @@
 		"type": "function"
 	}
 ]
-        var contractaddress = '0x99694eA5109070F73Fc6550Cc55C573f48d08C46';
+        var contractaddress = '0x8a71646e370d7834d2586dd7239956bd42e83a18';
 		 function prev_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '5000000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account});
 			var ds1 = document.getElementById("dates1").value;
             var id = document.getElementById("id0").value;
 			 var result = myContract.methods.previous_dates(id,ds1).send(function (err, result) {
@@ -863,7 +837,7 @@
                 });
 				}
 				function insu_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '5000000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account});
 			var id = document.getElementById("id1").value;
 			var ids1 = document.getElementById("appl").value;
 			var ids2 = document.getElementById("pono").value;

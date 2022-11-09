@@ -32,7 +32,7 @@
 		// Legacy DApp browsers
 		else if (window.web3) {
 			//window.web3 = new Web3(web3.currentProvider);
-			window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+			window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/88f2325f3b7c4cffa32451f99767f4e7")); 
 			}
 		// Non-DApp browsers
 		else {
@@ -222,10 +222,10 @@
 		"type": "function"
 	}
 ]
-        var contractaddress = '0x9125Fd4Ee671F0B53F5b145efE6101A0B7Aa1bfB';
+        var contractaddress = '0x8d81cfbfef1fd1de08cbbc2e4c96b0bd0f12e7b6';
         
         function add_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '5000000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account});
 			var ds1 = document.getElementById("age").value;
 			var ds2 = document.getElementById("gen").value;
 			var ds3 = document.getElementById("hght").value;
