@@ -7,33 +7,52 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/hospital.css" />
   </head>
   <body>
-    <p>
-      <a href="hospital.html"
-        ><button type="submit" class="hidden" style="margin-right: 16px">
-          Hospital Registration
+    <nav class="navbar">
+      <a href="doctor.html"
+        ><button
+          class="page__buttons"
+          class="hidden"
+          style="margin-right: 16px"
+        >
+          Doctor Registration
         </button></a
       ><a href="patient.html"
-        ><button type="submit" class="hidden" style="margin-right: 16px">
+        ><button
+          class="page__buttons"
+          class="hidden"
+          style="margin-right: 16px"
+        >
           Patient Registration
         </button></a
       ><a href="patient_details.html"
-        ><button type="submit" class="hidden" style="margin-right: 16px">
+        ><button
+          class="page__buttons"
+          class="hidden"
+          style="margin-right: 16px"
+        >
           View Patient Details
         </button></a
       ><a href="record_details.html"
-        ><button type="submit" class="hidden" style="margin-right: 16px">
+        ><button
+          class="page__buttons"
+          class="hidden"
+          style="margin-right: 16px"
+        >
           View Medical Record
         </button></a
       ><a href="examine_details.html"
-        ><button type="submit" class="hidden" style="margin-right: 16px">
+        ><button
+          class="page__buttons"
+          class="hidden"
+          style="margin-right: 16px"
+        >
           View Patient Examine details
         </button></a
       >
-    </p>
-
-    <h1>Doctor Registration</h1>
+    </nav>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
     <script>
       var account;
@@ -186,40 +205,35 @@
       }
     </script>
 
-    <h2>Register Doctor</h2>
-    <form>
-      <table style="width: 25%">
-        <tr>
-          <td>Enter Doctor Id:</td>
-          <td><input type="text" id="id1" name="id1" /></td>
-        </tr>
-        <tr>
-          <td>Doctor Name:</td>
-          <td><input type="text" id="name1" name="name1" /></td>
-        </tr>
-        <tr>
-          <td>Doctor Specification:</td>
-          <td><input type="text" id="spec" name="spec" /></td>
-        </tr>
-
-        <tr>
-          <td>Doctor Phone Number:</td>
-          <td><input type="text" id="pno" name="pno" /></td>
-        </tr>
-        <tr>
-          <td>Doctor Address:</td>
-          <td><input type="text" id="addr" name="addr" /></td>
-        </tr>
-
-        <tr>
-          <td>
-            <input type="button" onclick="add_details()" value="Register" />
-          </td>
-        </tr>
-      </table>
-    </form>
-    <h3>
-      To get details of a doctor <a href="doctor_details.html">Click Here</a>
-    </h3>
+    <div class="container">
+      <h1 class="heading__1">Doctor Registration</h1>
+      <h2 class="heading__2">Register Doctor</h2>
+      <form class="doctor__register__form">
+        <div class="form__div">
+          <label class="input__labels">Enter Doctor Id:</label class="input__labels">
+          <input class="inputs" type="text" id="id1" name="id1" />
+        </div>
+        <div class="form__div">
+          <label class="input__labels">Doctor Name:</label class="input__labels">
+          <input class="inputs" type="text" id="name1" name="name1" />
+        </div>
+        <div class="form__div">
+          <label class="input__labels">Doctor Specification:</label class="input__labels">
+          <input class="inputs" type="text" id="spec" name="spec" />
+        </div>
+        <div class="form__div">
+          <label class="input__labels">Doctor Phone Number:</label class="input__labels">
+          <input class="inputs" type="text" id="pno" name="pno" />
+        </div>
+        <div class="form__div">
+          <label class="input__labels">Doctor Address:</label>
+          <input class="inputs" type="text" id="addr" name="addr" />
+        </div>
+        <input class="submit__button" type="button" onclick="add_details()" value="Register" />
+      </form>
+      <h3 class="heading__3">
+        To get details of a doctor <a href="doctor_details.html">Click Here</a>
+      </h3>
+    </div>
   </body>
 </html>
